@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Badge } from './ui/badge';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
-import { Wifi, WifiOff, CloudOff, Cloud, Sync } from 'lucide-react';
+import { Wifi, WifiOff, CloudOff, Cloud, RefreshCw } from 'lucide-react';
 import OfflineService from '../services/OfflineService';
 
 const OfflineIndicator = ({ isOnline }) => {
@@ -112,7 +112,7 @@ const OfflineIndicator = ({ isOnline }) => {
                         onClick={handleSync}
                         className="w-full flex items-center space-x-2 bg-blue-600 hover:bg-blue-700"
                       >
-                        <Sync className="w-3 h-3" />
+                        <RefreshCw className="w-3 h-3" />
                         <span>Sync {pendingSyncCount} items</span>
                       </Button>
                     )}
