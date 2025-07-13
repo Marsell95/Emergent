@@ -1,7 +1,31 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
+  "name": "it-english-learning-android",
+  "version": "1.0.0",
+  "description": "IT English Learning mobile app for Android with flashcard-based vocabulary learning, offline support, and native mobile features.",
+  "main": "public/index.html",
+  "homepage": ".",
   "private": true,
+  "keywords": [
+    "english",
+    "learning",
+    "flashcards",
+    "it",
+    "programming",
+    "vocabulary",
+    "mobile",
+    "android",
+    "offline",
+    "education"
+  ],
+  "author": "IT English Learning Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/it-english-learning-android.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/it-english-learning-android/issues"
+  },
   "dependencies": {
     "@capacitor/android": "^7.4.2",
     "@capacitor/app": "^7.0.1",
