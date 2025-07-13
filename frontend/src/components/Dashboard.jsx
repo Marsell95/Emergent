@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Button } from './ui/button';
 import { Progress } from './ui/progress';
 import { Badge } from './ui/badge';
+import SaveToGitHubButton from './SaveToGitHubButton';
 import { cardCategories, userProgress } from '../data/mock';
 import { Trophy, Target, Calendar, TrendingUp } from 'lucide-react';
 
@@ -15,13 +16,18 @@ const Dashboard = ({ user, onStartStudy, onCreateCard }) => {
       {/* Welcome Header */}
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl p-8 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-        <div className="relative z-10">
-          <h1 className="text-3xl font-bold mb-2">
-            Welcome back, {user.name}! 👋
-          </h1>
-          <p className="text-blue-100 text-lg">
-            Ready to continue your IT English learning journey?
-          </p>
+        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold mb-2">
+              Welcome back, {user.name}! 👋
+            </h1>
+            <p className="text-blue-100 text-lg">
+              Ready to continue your IT English learning journey?
+            </p>
+          </div>
+          <div className="mt-4 lg:mt-0">
+            <SaveToGitHubButton />
+          </div>
         </div>
       </div>
 
@@ -97,6 +103,38 @@ const Dashboard = ({ user, onStartStudy, onCreateCard }) => {
           </CardContent>
         </Card>
       </div>
+
+      {/* GitHub Notice */}
+      <Card className="bg-gradient-to-br from-indigo-50 to-purple-50 border-indigo-200">
+        <CardHeader>
+          <CardTitle className="flex items-center text-indigo-800">
+            <span className="text-2xl mr-2">🚀</span>
+            Android App Ready for GitHub!
+          </CardTitle>
+          <CardDescription className="text-indigo-600">
+            Your complete IT English Learning Android app is ready for deployment
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div className="bg-white rounded-lg p-3 border border-indigo-200">
+              <div className="font-semibold text-indigo-800">📱 Native Android App</div>
+              <div className="text-indigo-600 text-xs mt-1">Capacitor + React + Offline Mode</div>
+            </div>
+            <div className="bg-white rounded-lg p-3 border border-indigo-200">
+              <div className="font-semibold text-indigo-800">🔄 GitHub Actions</div>
+              <div className="text-indigo-600 text-xs mt-1">Automatic APK building</div>
+            </div>
+            <div className="bg-white rounded-lg p-3 border border-indigo-200">
+              <div className="font-semibold text-indigo-800">📚 Complete Docs</div>
+              <div className="text-indigo-600 text-xs mt-1">README + Build guide</div>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <SaveToGitHubButton />
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Learning Categories */}
       <div className="space-y-4">
